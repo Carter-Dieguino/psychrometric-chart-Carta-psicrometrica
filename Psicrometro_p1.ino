@@ -187,7 +187,7 @@ void setup() {
 
   if (rtc.lostPower()) {
     Serial.println("RTC perdió energía, ajustando fecha y hora...");
-    rtc.adjust(DateTime(F(_DATE), F(TIME_)));
+    rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
   }
 
   dht.begin();
